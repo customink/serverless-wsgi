@@ -141,5 +141,5 @@ def handler(event, context):
     return {
         u'statusCode': response.status_code,
         u'headers': dict(new_headers),
-        u'body': str(response.data)
+        u'body': response.data.decode('utf-8')
     }
